@@ -1,8 +1,9 @@
 import Wrapper from "@/components/organ/wrapper";
+import TechStack from "@/components/mollecul/techstack";
 export default function Home() {
   return (
     <Wrapper>
-      <div className="md:m-10">
+      <div className="md:m-10 w-full p-5">
         <div className="flex flex-col gap-3 m-10">
         <h1 className="text-2xl font-medium text-gray-700">About</h1>
         <p className="text-md text-gray-600 text-justify">As a Fullstack Web Developer, I have a passion for Front-End and Android Development. I have created intuitive and engaging user 
@@ -12,11 +13,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-3 m-10">
           <h1 className="text-2xl font-medium text-gray-700">Tech Stack</h1>
-          <p className="text-md text-gray-600 text-justify">- ReactJS<br/>
-          - NextJS<br/>
-          - TailwindCSS<br/>
-          - Figma<br/>
-          </p>
+          <TechStack/>
         </div>
       </div>
     </Wrapper>
