@@ -1,78 +1,88 @@
 'use client'
-import { SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiVite, SiLaravel, SiPhp, SiExpress, SiPostgresql, 
-         SiMysql, SiPrisma, SiRedis, SiDocker, SiGithub, SiVisualstudiocode, 
-         SiPostman, SiFigma, SiJenkins, SiLinux } from "react-icons/si";
+import { 
+  SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss,
+  SiReact, SiKotlin, SiAndroid, SiNodedotjs,
+  SiExpress, SiGithub, SiPostman, SiFigma,
+  SiMysql, SiPostgresql, SiLaravel, SiPhp, SiCodeigniter,
+} from "react-icons/si";
 
 const TechStack = () => {
   const techRows = [
-    // Row 1 - Frontend
+    // Row 1 - Frontend & Languages
     [
-      { icon: SiReact, name: 'React.js', color: '#61DAFB' },
+      { icon: SiLaravel, name: 'Laravel', color: '#3FCF8E' },
       { icon: SiNextdotjs, name: 'Next.js', color: '#ffffff' },
       { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
+      { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
+      { icon: SiGithub, name: 'Github', color: '#00ADD8' },
       { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
+    ],
+    // Row 2 - Tools & Frameworks
+    [
+      { icon: SiPostman, name: 'Postman', color: '#8DD6F9' },
+      { icon: SiExpress, name: 'Express', color: '#ffffff' },
+      { icon: SiReact, name: 'React Js', color: '#0081CB' },
+      { icon: SiPhp, name: 'Php', color: '#C21325' },
+      { icon: SiFigma, name: 'Figma', color: '#DC382D' },
       { icon: SiTailwindcss, name: 'TailwindCSS', color: '#38B2AC' },
-      { icon: SiVite, name: 'Vite', color: '#646CFF' },
     ],
-    // Row 2 - Backend
+    // Row 3 - Backend & Databases
     [
-      { icon: SiLaravel, name: 'Laravel', color: '#FF2D20' },
-      { icon: SiPhp, name: 'PHP', color: '#777BB4' },
-      { icon: SiExpress, name: 'Express.js', color: '#ffffff' },
-      { icon: SiPostgresql, name: 'PostgreSQL', color: '#336791' },
-      { icon: SiMysql, name: 'MySQL', color: '#4479A1' },
-      { icon: SiPrisma, name: 'Prisma', color: '#2D3748' },
-      { icon: SiRedis, name: 'Redis', color: '#DC382D' },
+      { icon: SiMysql, name: 'MySQL', color: '#2D3748' },
+      { icon: SiPostgresql, name: 'PostgreSql', color: '#00ADD8' },
+      { icon: SiKotlin, name: 'Kotlin', color: '#007396' },
+      { icon: SiAndroid, name: 'Android'},
+      { icon: SiCodeigniter, name: 'CI', color: '#DC382D' },
     ],
-    // Row 3 - Tools
-    [
-      { icon: SiDocker, name: 'Docker', color: '#2496ED' },
-      { icon: SiGithub, name: 'GitHub', color: '#ffffff' },
-      { icon: SiVisualstudiocode, name: 'VS Code', color: '#007ACC' },
-      { icon: SiPostman, name: 'Postman', color: '#FF6C37' },
-      { icon: SiFigma, name: 'Figma', color: '#F24E1E' },
-      { icon: SiJenkins, name: 'Jenkins', color: '#D24939' },
-      { icon: SiLinux, name: 'Linux', color: '#FCC624' },
-    ]
   ];
 
   return (
+    <div className="w-full bg-white py-8">    
       <div className="relative flex flex-col gap-4">
-        {techRows.map((row, rowIndex) => (
-          <div key={rowIndex} className="relative flex overflow-hidden hover:[animation-play-state:paused]">
-            {/* Main scroll container - PERUBAHAN DISINI */}
-            <div className={`flex ${rowIndex % 2 === 0 ? 'animate-scroll-right' : 'animate-scroll-left'} gap-4 py-4`}>
-              {/* Original items */}
-              {row.map((tech, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 bg-[#1a1a1a] hover:bg-[#252525] transition-colors rounded-full px-4 py-2 min-w-max group"
-                >
-                  <tech.icon 
-                    className="h-5 w-5 transition-transform group-hover:scale-110" 
-                    style={{ color: tech.color }} 
-                  />
-                  <span className="text-sm text-white">{tech.name}</span>
-                </div>
-              ))}
-              
-              {/* Duplicate items for seamless scroll */}
-              {row.map((tech, index) => (
-                <div
-                  key={`duplicate-${index}`}
-                  className="flex items-center gap-2 bg-[#1a1a1a] hover:bg-[#252525] transition-colors rounded-full px-4 py-2 min-w-max group"
-                >
-                  <tech.icon 
-                    className="h-5 w-5 transition-transform group-hover:scale-110" 
-                    style={{ color: tech.color }} 
-                  />
-                  <span className="text-sm text-white">{tech.name}</span>
-                </div>
-              ))}
+        {techRows.map((row, rowIndex) => {
+          // Calculate total width of a single set of items
+          const itemWidth = 180; // Approximate width of each item including gap
+          const totalWidth = row.length * itemWidth;
+          
+          return (
+            <div key={rowIndex} className="relative h-16 overflow-hidden">
+              <div 
+                className={`flex absolute whitespace-nowrap ${
+                  rowIndex === 1 ? 'animate-scroll-reverse' : 'animate-scroll'
+                } hover:pause`}
+                style={{
+                  width: `${totalWidth}px`,
+                }}
+              >
+                {/* Repeat items enough times to ensure no gaps */}
+                {[...Array(4)].map((_, duplicateIndex) => (
+                  <div 
+                    key={duplicateIndex} 
+                    className="flex gap-4"
+                    style={{
+                      paddingLeft: duplicateIndex === 0 ? '0' : '1rem',
+                    }}
+                  >
+                    {row.map((tech, index) => (
+                      <div
+                        key={`${duplicateIndex}-${index}`}
+                        className="inline-flex items-center gap-2 bg-white hover:bg-gray-200 border border-gray-400 shadow shadow-lg transition-colors rounded-full px-4 py-2 group"
+                      >
+                        <tech.icon 
+                          className="h-5 w-5 transition-transform group-hover:scale-110" 
+                          style={{ color: tech.color }} 
+                        />
+                        <span className="text-sm text-gray-700 whitespace-nowrap">{tech.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
+    </div>
   );
 };
 

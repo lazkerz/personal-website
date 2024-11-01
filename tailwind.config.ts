@@ -67,19 +67,19 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		  animation: {
-			'scroll-left': 'scroll-left 40s linear infinite',
-			'scroll-right': 'scroll-right 40s linear infinite',
-		},
-		keyframes: {
-			'scroll-left': {
+			'scroll': 'scroll 25s linear infinite',
+			'scroll-reverse': 'scroll-reverse 25s linear infinite',
+		  },
+		  keyframes: {
+			scroll: {
 			  '0%': { transform: 'translateX(0)' },
-			  '100%': { transform: 'translateX(-100%)' },
+			  '100%': { transform: 'translateX(-25%)' }, // Adjusted to match number of duplicates
 			},
-			'scroll-right': {
-			  '0%': { transform: 'translateX(-100%)' },
+			'scroll-reverse': {
+			  '0%': { transform: 'translateX(-25%)' }, // Adjusted to match number of duplicates
 			  '100%': { transform: 'translateX(0)' },
 			},
-		},
+		  },
   	},
   },
   plugins: [],

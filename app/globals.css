@@ -84,11 +84,21 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
-  body {
-    @apply bg-background text-foreground;
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(-25%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
