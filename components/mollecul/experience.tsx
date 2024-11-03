@@ -1,24 +1,26 @@
-'use client'
-import Wrapper from "@/components/organ/wrapper";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/atom/card"
-import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/atom/tabs"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@radix-ui/react-collapsible";
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+"use client"
 
+import { Card, CardContent } from "@/components/atom/card"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/atom/tabs"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/atom/collapsible"
+import { useState } from "react"
+import { ChevronDown } from "lucide-react"
 
-interface ExperienceProps {
+interface Experience {
   id: number
-  title: string
   logo: string
+  title: string
   company: string
   location: string
   period: string
   description: string[]
 }
 
-
-const experiences: ExperienceProps[] = [
+const experiences: Experience[] = [
   {
     id: 1,
     logo: "xd",
@@ -64,37 +66,36 @@ const experiences: ExperienceProps[] = [
   }
 ]
 
-export default function Resume() {
+export default function Experience() {
   const [openItems, setOpenItems] = useState<number[]>([])
 
   const toggleItem = (id: number) => {
-    setOpenItems(current => {
-      if (current.includes(id)) {
-        return current.filter(item => item !== id)
-      } else {
-        return [...current, id]
-      }
-    })
+    setOpenItems(current =>
+      current.includes(id)
+        ? current.filter(item => item !== id)
+        : [...current, id]
+    )
   }
+
   return (
-    <Wrapper>
-      <div className="md:m-10 md:mt-0 p-5 bg-gray-50 space-y-8">
-        <p className="text-2xl font-medium text-gray-700">Resume</p>
-        <p className="text-md text-gray-600">
-          This several project i have work and my work experience
+    <div className="min-h-screen bg-black text-white p-8">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">Resume</h1>
+        <p className="text-xl text-gray-400 mb-8">
+          Several projects that I have worked on, both private and open source.
         </p>
 
-        <Tabs defaultValue="career" className="mb-10">
-          <TabsList className="bg-gray-100 border border-gray-200 shadow shadow-md">
+        <Tabs defaultValue="career" className="mb-8">
+          <TabsList className="bg-gray-900">
             <TabsTrigger 
               value="career"
-              className="data-[state=active]:bg-white"
+              className="data-[state=active]:bg-gray-800"
             >
               Career & Education
             </TabsTrigger>
             <TabsTrigger 
               value="activity"
-              className="data-[state=active]:bg-white"
+              className="data-[state=active]:bg-gray-800"
             >
               Activity
             </TabsTrigger>
@@ -104,7 +105,7 @@ export default function Resume() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Work Experience Column */}
               <div>
-                <h2 className="text-2xl font-bold mb-3">Work & Experience</h2>
+                <h2 className="text-3xl font-bold mb-6">Work & Experience</h2>
                 <div className="space-y-4">
                   {experiences.map((experience) => (
                     <Collapsible
@@ -159,7 +160,7 @@ export default function Resume() {
 
               {/* Education Column */}
               <div>
-                <h2 className="text-2xl font-bold mb-3">Education</h2>
+                <h2 className="text-3xl font-bold mb-6">Education</h2>
                 <Card className="bg-gray-900 border-gray-800">
                   <CardContent className="p-6 flex gap-4">
                     <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
@@ -187,6 +188,6 @@ export default function Resume() {
           </TabsContent>
         </Tabs>
       </div>
-    </Wrapper>
-  );
+    </div>
+  )
 }

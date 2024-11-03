@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <div className="md:m-10 md:mt-0 p-5 bg-gray-100 space-y-8">
+      <div className="md:m-10 md:mt-0 p-5 bg-gray-50 space-y-8">
         <div className="md:hidden flex flex-row items-center justify-between gap-3">
             <div className="flex flex-col verflow-hidden duration-300 group-data-[collapsible=icon]:opacity-0">
                 <p className="text-sm font-semibold truncate">
