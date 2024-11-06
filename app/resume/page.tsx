@@ -6,6 +6,8 @@ import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/atom/tabs"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@radix-ui/react-collapsible";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import WeeklyStatistic from "@/components/mollecul/WeeklyStatistic";
+import GitHubContributions from "@/components/mollecul/GithubContributions";
 
 
 interface ExperienceProps {
@@ -197,11 +199,9 @@ export default function Resume() {
           </TabsContent>
 
           <TabsContent value="activity">
-            <div className="text-center text-gray-400 py-8">
-              <Card>
-                <CardContent>
-                </CardContent>
-              </Card>
+            <div className="flex flex-col gap-5">
+              <WeeklyStatistic/>
+              <GitHubContributions/>
             </div>
           </TabsContent>
         </Tabs>
