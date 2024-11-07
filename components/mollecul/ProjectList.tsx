@@ -1,25 +1,52 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { projects } from "@/app/constant/projects";
-import { memo, useMemo } from "react";
+import React from 'react';
+import { Project } from '@/lib/constants/projects';
+import ProjectCard from './ProjectCard';
+import { motion } from 'framer-motion';
 
-function ProjectsList() {
-  const datas = useMemo(() => projects, []);
-  return (
-    <section className="grid gap-2 pt-2 sm:grid-cols-2">
-      {datas.map((el, idx) => (
-        <motion.div
-          key={el.title}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3, delay: idx * 0.1 }}
-        >
-         
-        </motion.div>
-      ))}
-    </section>
-  );
+interface ProjectListProps {
+  projects: Project[];
 }
 
-export default memo(ProjectsList);
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 }
+};
+
+const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
+  return (
+    <motion.div 
+      className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+      variants={container}
+      initial="hidden"
+      animate="show"
+    >
+      {projects.map((project) => (
+        <motion.div key={project.id} variants={item}>
+          <ProjectCard
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            images={project.images}
+            technologies={project.technologies}
+            demo={project.demo}
+            type={project.type}
+          />
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+};
+
+export default ProjectList;

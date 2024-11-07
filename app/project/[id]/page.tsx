@@ -1,66 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
-// app/project/[id]/page.tsx
 'use client';
 
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/atom/button";
-
-// Data projects (bisa dipindah ke file terpisah)
-const projectsData = {
-  mahati: {
-    title: "mahati",
-    description: "is a mobile application designed to be a reliable companion for individuals dealing with hypertension...",
-    fullDescription: "Mobile aplikasi untuk mengelola tekanan darah pengguna, memberikan informasi dan pemantauan terkait hipertensi.",
-    images: [
-      "/projects/mahati/preview1.png",
-      "/projects/mahati/preview2.png",
-      "/projects/mahati/preview3.png"
-    ],
-    technologies: [
-      {
-        name: "Android",
-        icon: "/icons/android.svg",
-        color: "bg-[#3DDC84]/20"
-      },
-      {
-        name: "Flutter",
-        icon: "/icons/flutter.svg",
-        color: "bg-[#02569B]/20"
-      },
-      {
-        name: "Firebase",
-        icon: "/icons/firebase.svg",
-        color: "bg-[#FFCA28]/20"
-      }
-    ],
-    demoUrl: "https://example.com/mahati-demo"
-  },
-  xdroidoss: {
-    title: "xdroidOSS",
-    description: "An Android OS with Minimal Design...",
-    fullDescription: "Custom Android OS yang fokus pada UI/UX minimalis...",
-    images: [
-      "/projects/xdroid/preview1.png",
-      "/projects/xdroid/preview2.png"
-    ],
-    technologies: [
-      {
-        name: "Android",
-        icon: "/icons/android.svg",
-        color: "bg-[#3DDC84]/20"
-      }
-    ],
-    demoUrl: "https://example.com/xdroid-demo"
-  }
-};
+import { projects } from "@/lib/constants/projects";
+import { notFound } from 'next/navigation';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProjectDetail({ params }: { params: { id: string } }) {
-  const project = projectsData[params.id as keyof typeof projectsData];
+  const project = projects.find(p => p.id === parseInt(params.id));
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   if (!project) {
-    return <div>Project not found</div>;
+    notFound();
   }
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => 
+      prev === project.images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? project.images.length - 1 : prev - 1
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -83,47 +50,86 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           {/* Title */}
           <div>
             <h1 className="text-3xl font-bold text-gray-900">{project.title}</h1>
-            <p className="mt-4 text-gray-600">{project.fullDescription}</p>
+            <p className="mt-4 text-gray-600">{project.description}</p>
           </div>
 
           {/* Tech Stack */}
           <div>
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Tech Stack :</h2>
-            <div className="flex gap-4">
-              {project.technologies.map((tech, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg ${tech.color}`}
-                >
-                  <img src={tech.icon} alt={tech.name} className="w-5 h-5" />
-                  <span className="text-sm font-medium">{tech.name}</span>
-                </div>
-              ))}
+            <div className="flex gap-4 flex-wrap">
+              {project.technologies.map((tech, index) => {
+                const Icon = tech.icon;
+                return (
+                  <div
+                    key={index}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg ${tech.color}`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span className="text-sm font-medium">{tech.name}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* Project Images */}
-          <div className="grid gap-6">
-            {project.images.map((image, index) => (
-              <div key={index} className="rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src={image}
-                  alt={`${project.title} preview ${index + 1}`}
-                  className="w-full h-auto"
-                />
-              </div>
-            ))}
+          {/* Image Carousel */}
+          <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-200">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentImageIndex}
+                src={project.images[currentImageIndex].url}
+                alt={project.images[currentImageIndex].alt}
+                className="w-full h-full object-contain"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              />
+            </AnimatePresence>
+
+            {/* Navigation Buttons */}
+            {project.images.length > 1 && (
+              <>
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full text-gray-800 hover:text-gray-900 transition-all"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full text-gray-800 hover:text-gray-900 transition-all"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+
+                {/* Image Indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {project.images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2.5 h-2.5 rounded-full transition-all ${
+                        index === currentImageIndex 
+                          ? 'bg-white scale-110' 
+                          : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
 
           {/* Demo Button */}
-          {project.demoUrl && (
+          {project.demo && (
             <div className="flex justify-center">
               <Button
                 asChild
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg"
+                className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-lg"
               >
                 <a 
-                  href={project.demoUrl} 
+                  href={project.demo} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

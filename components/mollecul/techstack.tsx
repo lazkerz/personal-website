@@ -4,6 +4,7 @@ import {
   SiReact, SiKotlin, SiAndroid, SiNodedotjs,
   SiExpress, SiGithub, SiPostman, SiFigma,
   SiMysql, SiPostgresql, SiLaravel, SiPhp, SiCodeigniter,
+  SiUbuntu
 } from "react-icons/si";
 
 const TechStack = () => {
@@ -11,18 +12,18 @@ const TechStack = () => {
     // Row 1 - Frontend & Languages
     [
       { icon: SiLaravel, name: 'Laravel', color: '#3FCF8E' },
-      { icon: SiNextdotjs, name: 'Next.js', color: '#ffffff' },
+      { icon: SiNextdotjs, name: 'Next.js'},
       { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
       { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
-      { icon: SiGithub, name: 'Github', color: '#00ADD8' },
+      { icon: SiGithub, name: 'Github'},
       { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
     ],
     // Row 2 - Tools & Frameworks
     [
       { icon: SiPostman, name: 'Postman', color: '#8DD6F9' },
-      { icon: SiExpress, name: 'Express', color: '#ffffff' },
+      { icon: SiExpress, name: 'Express'},
       { icon: SiReact, name: 'React Js', color: '#0081CB' },
-      { icon: SiPhp, name: 'Php', color: '#C21325' },
+      { icon: SiPhp, name: 'Php', color: '#00ADD8' },
       { icon: SiFigma, name: 'Figma', color: '#DC382D' },
       { icon: SiTailwindcss, name: 'TailwindCSS', color: '#38B2AC' },
     ],
@@ -31,8 +32,9 @@ const TechStack = () => {
       { icon: SiMysql, name: 'MySQL', color: '#2D3748' },
       { icon: SiPostgresql, name: 'PostgreSql', color: '#00ADD8' },
       { icon: SiKotlin, name: 'Kotlin', color: '#007396' },
-      { icon: SiAndroid, name: 'Android'},
+      { icon: SiAndroid, name: 'Android', color: '#339933'},
       { icon: SiCodeigniter, name: 'CI', color: '#DC382D' },
+      { icon: SiUbuntu, name: 'Ubuntu'},
     ],
   ];
 
