@@ -36,6 +36,8 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+
+  //Project Web
   {
     id: 1,
     title: "Siphani",
@@ -350,5 +352,223 @@ export const projects: Project[] = [
     demo: "",
     type: "Web",
   },
+
+ //Project Mobile
+ {
+  id: 7,
+  title: "Museum Digital",
+  description: "",
+  images: [
+    {
+      url: "/projects/wedding/wedding-preview.jpg",
+      alt: "fastfixx Preview 1"
+    },
+    {
+      url: "/projects/wedding/wedding-preview2.jpg",
+      alt: "fastfixx Preview 2"
+    },
+    {
+      url: "/projects/wedding/wedding-preview3.jpg",
+      alt: "fastfixx Preview 3"
+    },
+  ],
+  technologies: [
+    {
+      name: "Javascript",
+      icon: SiJavascript,
+      color: "bg-[#06B6D4]/20"
+    },
+    {
+      name: "Node Js",
+      icon: SiNodedotjs,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "Express Js",
+      icon: SiExpress,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "React",
+      icon: SiReact,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "MySQL",
+      icon: SiMysql,
+      color: "bg-[#4479A1]/20"
+    },
+    {
+      name: "Figma",
+      icon: SiFigma,
+      color: "bg-[#F24E1E]/20"
+    }
+  ],
+  demo: "",
+  type: "Mobile",
+
+ },
+ {
+  id: 8,
+  title: "MateUp",
+  description: "",
+  images: [
+    {
+      url: "/projects/wedding/wedding-preview.jpg",
+      alt: "fastfixx Preview 1"
+    },
+    {
+      url: "/projects/wedding/wedding-preview2.jpg",
+      alt: "fastfixx Preview 2"
+    },
+    {
+      url: "/projects/wedding/wedding-preview3.jpg",
+      alt: "fastfixx Preview 3"
+    },
+  ],
+  technologies: [
+    {
+      name: "Javascript",
+      icon: SiJavascript,
+      color: "bg-[#06B6D4]/20"
+    },
+    {
+      name: "Node Js",
+      icon: SiNodedotjs,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "Express Js",
+      icon: SiExpress,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "React",
+      icon: SiReact,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "MySQL",
+      icon: SiMysql,
+      color: "bg-[#4479A1]/20"
+    },
+    {
+      name: "Figma",
+      icon: SiFigma,
+      color: "bg-[#F24E1E]/20"
+    }
+  ],
+  demo: "",
+  type: "Mobile",
+
+ },
+ {
+  id: 9,
+  title: "Scada Technical Tirtanadi",
+  description: "",
+  images: [
+    {
+      url: "/projects/wedding/wedding-preview.jpg",
+      alt: "fastfixx Preview 1"
+    },
+    {
+      url: "/projects/wedding/wedding-preview2.jpg",
+      alt: "fastfixx Preview 2"
+    },
+    {
+      url: "/projects/wedding/wedding-preview3.jpg",
+      alt: "fastfixx Preview 3"
+    },
+  ],
+  technologies: [
+    {
+      name: "Javascript",
+      icon: SiJavascript,
+      color: "bg-[#06B6D4]/20"
+    },
+    {
+      name: "Node Js",
+      icon: SiNodedotjs,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "Express Js",
+      icon: SiExpress,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "React",
+      icon: SiReact,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "MySQL",
+      icon: SiMysql,
+      color: "bg-[#4479A1]/20"
+    },
+    {
+      name: "Figma",
+      icon: SiFigma,
+      color: "bg-[#F24E1E]/20"
+    }
+  ],
+  demo: "",
+  type: "Mobile",
+
+ },
+ {
+  id: 10,
+  title: "Fastfixx",
+  description: "",
+  images: [
+    {
+      url: "/projects/wedding/wedding-preview.jpg",
+      alt: "fastfixx Preview 1"
+    },
+    {
+      url: "/projects/wedding/wedding-preview2.jpg",
+      alt: "fastfixx Preview 2"
+    },
+    {
+      url: "/projects/wedding/wedding-preview3.jpg",
+      alt: "fastfixx Preview 3"
+    },
+  ],
+  technologies: [
+    {
+      name: "Javascript",
+      icon: SiJavascript,
+      color: "bg-[#06B6D4]/20"
+    },
+    {
+      name: "Node Js",
+      icon: SiNodedotjs,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "Express Js",
+      icon: SiExpress,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "React",
+      icon: SiReact,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "MySQL",
+      icon: SiMysql,
+      color: "bg-[#4479A1]/20"
+    },
+    {
+      name: "Figma",
+      icon: SiFigma,
+      color: "bg-[#F24E1E]/20"
+    }
+  ],
+  demo: "",
+  type: "Mobile",
+
+ }
   
 ];
