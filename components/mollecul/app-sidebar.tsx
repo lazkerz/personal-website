@@ -55,7 +55,7 @@ export function AppSidebar() {
           <SidebarGroup>
             <SidebarHeader className="flex items-center gap-3 border-b border-sidebar-border p-4">
               <Avatar className="w-20 h-20 group-data-[collapsible=icon]:w-10 group-data-[collapsible=icon]:h-10 transition-all duration-300">
-                <AvatarImage src="/Nurul.jpg" alt="Nurul Fatma" />
+                <AvatarImage src="/nurul.jpg" alt="Nurul Fatma" />
                 <AvatarFallback>N</AvatarFallback>
               </Avatar>
               <div className="flex flex-col items-center overflow-hidden duration-300 group-data-[collapsible=icon]:opacity-0">
