@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import { Card, CardContent } from "@/components/atom/card"
@@ -172,7 +173,7 @@ export default function Experience() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">University of Muhammadiyah Malang</h3>
-                      <p className="text-gray-400">Bachelor's degree • Informatics Engineering, S.Kom</p>
+                      <p className="text-gray-400">Bachelor&apos;s degree • Informatics Engineering, S.Kom</p>
                       <p className="text-gray-500 text-sm mt-2">2021 - Current • Malang, East Java, Indonesia</p>
                     </div>
                   </CardContent>

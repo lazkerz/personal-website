@@ -1,8 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Wrapper from "@/components/organ/wrapper";
-import TechStack from "@/components/mollecul/Techstack";
-import Recommendation from "@/components/mollecul/Recomendation";
+import TechStack from '@/components/mollecul/Techstack';
+import Recommendation from '@/components/mollecul/Recomendation';
 import {Avatar, AvatarImage, AvatarFallback } from "@/components/atom/avatar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/atom/card"
 import { Skeleton } from "@/components/atom/skeleton"
