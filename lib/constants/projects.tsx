@@ -11,8 +11,18 @@ import {
   SiPostgresql,
   SiJavascript,
   SiNextdotjs,
+  SiGithub,
+  SiPostman,
+  SiOpenjdk,
+  SiGooglecloud,
+  SiAndroid,
+  SiKotlin,
+  SiRealm,
+  SiAuth0,
 } from "react-icons/si";
 import { IconType } from 'react-icons';
+
+
 
 export interface ProjectImage {
   url: string;
@@ -357,19 +367,11 @@ export const projects: Project[] = [
  {
   id: 7,
   title: "Museum Digital",
-  description: "",
+  description: "A digital museum app with two main access levels: Admin and Visitor. Visitors can freely explore cultural features like traditional dances, customs, musical instruments, and a Regional Cuisine section filled with local recipes, all without needing to log in",
   images: [
     {
-      url: "/projects/wedding/wedding-preview.jpg",
-      alt: "fastfixx Preview 1"
-    },
-    {
-      url: "/projects/wedding/wedding-preview2.jpg",
-      alt: "fastfixx Preview 2"
-    },
-    {
-      url: "/projects/wedding/wedding-preview3.jpg",
-      alt: "fastfixx Preview 3"
+      url: "/projects/museum/museum-preview.png",
+      alt: "museum Preview 1"
     },
   ],
   technologies: [
@@ -389,13 +391,33 @@ export const projects: Project[] = [
       color: "bg-[#FF2D20]/20"
     },
     {
-      name: "React",
-      icon: SiReact,
+      name: "Postman",
+      icon: SiPostman,
+      color: "bg-[#4479A1]/20"
+    },
+    {
+      name: "Google Cloud",
+      icon: SiGooglecloud,
+      color: "bg-[#4479A1]/20"
+    },
+    {
+      name: "Java",
+      icon: SiOpenjdk,
       color: "bg-[#FF2D20]/20"
     },
     {
-      name: "MySQL",
-      icon: SiMysql,
+      name: "Android",
+      icon: SiAndroid,
+      color: "bg-[#FF2D20]/20"
+    },
+    {
+      name: "PostgreSQL",
+      icon: SiPostgresql,
+      color: "bg-[#4479A1]/20"
+    },
+    {
+      name: "Github",
+      icon: SiGithub,
       color: "bg-[#4479A1]/20"
     },
     {
@@ -411,45 +433,36 @@ export const projects: Project[] = [
  {
   id: 8,
   title: "MateUp",
-  description: "",
+  description: "This project is an application used for women who have difficulty finding make-up recommendations according to their personality and skin type",
   images: [
     {
-      url: "/projects/wedding/wedding-preview.jpg",
-      alt: "fastfixx Preview 1"
+      url: "/projects/mateup/mateup-preview.png",
+      alt: "mateup Preview 1"
     },
     {
-      url: "/projects/wedding/wedding-preview2.jpg",
-      alt: "fastfixx Preview 2"
-    },
-    {
-      url: "/projects/wedding/wedding-preview3.jpg",
-      alt: "fastfixx Preview 3"
+      url: "/projects/mateup/mateup-preview2.png",
+      alt: "mateup Preview 2"
     },
   ],
   technologies: [
     {
-      name: "Javascript",
-      icon: SiJavascript,
-      color: "bg-[#06B6D4]/20"
+      name: "Android",
+      icon: SiAndroid,
+      color: "bg-[#4479A1]/20"
     },
     {
-      name: "Node Js",
-      icon: SiNodedotjs,
-      color: "bg-[#FF2D20]/20"
+      name: "Kotlin",
+      icon: SiKotlin,
+      color: "bg-[#4479A1]/20"
     },
     {
-      name: "Express Js",
-      icon: SiExpress,
-      color: "bg-[#FF2D20]/20"
+      name: "Realm Database",
+      icon: SiRealm,
+      color: "bg-[#4479A1]/20"
     },
     {
-      name: "React",
-      icon: SiReact,
-      color: "bg-[#FF2D20]/20"
-    },
-    {
-      name: "MySQL",
-      icon: SiMysql,
+      name: "Github",
+      icon: SiGithub,
       color: "bg-[#4479A1]/20"
     },
     {
@@ -465,45 +478,37 @@ export const projects: Project[] = [
  {
   id: 9,
   title: "Scada Technical Tirtanadi",
-  description: "",
+  description: "This project develops a mobile SCADA system for Tirtanadi Technical, allowing users to monitor and control SCADA operations remotely. The app provides real-time access to data like temperature, pressure, and flow rate, while enabling users to adjust settings and respond to issues, enhancing operational efficiency and proactive maintenance.",
   images: [
     {
-      url: "/projects/wedding/wedding-preview.jpg",
+      url: "/projects/scada/scada-preview.png",
       alt: "fastfixx Preview 1"
-    },
-    {
-      url: "/projects/wedding/wedding-preview2.jpg",
-      alt: "fastfixx Preview 2"
-    },
-    {
-      url: "/projects/wedding/wedding-preview3.jpg",
-      alt: "fastfixx Preview 3"
     },
   ],
   technologies: [
     {
-      name: "Javascript",
-      icon: SiJavascript,
-      color: "bg-[#06B6D4]/20"
+      name: "Android",
+      icon: SiAndroid,
+      color: "bg-[#4479A1]/20"
     },
     {
-      name: "Node Js",
-      icon: SiNodedotjs,
-      color: "bg-[#FF2D20]/20"
+      name: "Kotlin",
+      icon: SiKotlin,
+      color: "bg-[#4479A1]/20"
     },
     {
-      name: "Express Js",
-      icon: SiExpress,
-      color: "bg-[#FF2D20]/20"
+      name: "Realm Database",
+      icon: SiRealm,
+      color: "bg-[#4479A1]/20"
     },
     {
-      name: "React",
-      icon: SiReact,
-      color: "bg-[#FF2D20]/20"
+      name: "OAuth",
+      icon: SiAuth0,
+      color: "bg-[#4479A1]/20"
     },
     {
-      name: "MySQL",
-      icon: SiMysql,
+      name: "Github",
+      icon: SiGithub,
       color: "bg-[#4479A1]/20"
     },
     {
@@ -522,19 +527,29 @@ export const projects: Project[] = [
   description: "",
   images: [
     {
-      url: "/projects/wedding/wedding-preview.jpg",
+      url: "/projects/fastfixx/mobile/fastfixx-preview.png",
       alt: "fastfixx Preview 1"
     },
     {
-      url: "/projects/wedding/wedding-preview2.jpg",
+      url: "/projects/fastfixx/mobile/fastfixx-preview2.png",
       alt: "fastfixx Preview 2"
     },
     {
-      url: "/projects/wedding/wedding-preview3.jpg",
+      url: "/projects/fastfixx/mobile/fastfixx-preview3.png",
       alt: "fastfixx Preview 3"
     },
   ],
   technologies: [
+    {
+      name: "Android",
+      icon: SiAndroid,
+      color: "bg-[#4479A1]/20"
+    },
+    {
+      name: "Kotlin",
+      icon: SiKotlin,
+      color: "bg-[#4479A1]/20"
+    },
     {
       name: "Javascript",
       icon: SiJavascript,
@@ -561,6 +576,11 @@ export const projects: Project[] = [
       color: "bg-[#4479A1]/20"
     },
     {
+      name: "Github",
+      icon: SiGithub,
+      color: "bg-[#4479A1]/20"
+    },
+    {
       name: "Figma",
       icon: SiFigma,
       color: "bg-[#F24E1E]/20"
@@ -570,5 +590,7 @@ export const projects: Project[] = [
   type: "Mobile",
 
  }
+
+ 
   
 ];
