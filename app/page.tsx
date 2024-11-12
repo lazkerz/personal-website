@@ -31,7 +31,7 @@ export default function Home() {
                 </p>
             </div>
             <Avatar className="h-10 w-10">
-                <AvatarImage src="/Nurul.jpg" alt="Nurul Fatma" />
+                <AvatarImage src="/nurul.jpg" alt="Nurul Fatma" />
                 <AvatarFallback>N</AvatarFallback>
             </Avatar>
         </div>
