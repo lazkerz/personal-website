@@ -29,7 +29,7 @@ const Recommendation = () => {
             author: {
                 name: "Rezha Jamil Nasutionp",
                 role: "Software Engineer",
-                image: "/rezha.jpg",
+                image: "/recomen/rezha.jpg",
                 initials: "F"
             }
         }
