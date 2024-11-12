@@ -9,7 +9,7 @@ const Recommendation = () => {
             author: {
                 name: "Ananda Fiqri",
                 role: "Backend Developer at Indofund.id",
-                image: "/fiqri.jpg",
+                image: "/recomen/fiqri.jpg",
                 initials: "AF"
             }
         },
@@ -19,7 +19,7 @@ const Recommendation = () => {
             author: {
                 name: "Fatimatuzzahra",
                 role: "Fresh Graduate in Electric Engineering",
-                image: "/fatima.jpg",
+                image: "/recomen/fatima.jpg",
                 initials: "F"
             }
         },
