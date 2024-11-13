@@ -27,10 +27,10 @@ const Recommendation = () => {
             id: 3,
             content: "Bekerja dengan Nurul benar-benar membuat perbedaan dalam proyek kami. Dia tidak hanya membawa ide-ide segar ke dalam desain, tetapi juga membantu saya meng-handle sisi UI dan frontend dengan sangat baik. Setiap detail dikerjakannya dengan rapi, dan antarmuka yang dia buat selalu responsif dan intuitif. Ditambah lagi, Nurul cepat beradaptasi dengan teknologi dan tren baru, jadi hasilnya selalu terlihat up-to-date dan menarik. Kalau butuh Frontend Developer yang andal dan penuh inisiatif, Nurul pasti pilihan yang tepat!",
             author: {
-                name: "Rezha Jamil Nasutionp",
+                name: "Rezha Jamil Nasution",
                 role: "Software Engineer",
                 image: "/recomen/rezha.jpg",
-                initials: "F"
+                initials: "R"
             }
         }
     ];
