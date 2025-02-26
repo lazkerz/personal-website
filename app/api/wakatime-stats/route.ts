@@ -23,14 +23,36 @@ export async function GET() {
     }
 
     const data = await response.json();
-    // Transform to match component structure
+    
+    // Log the data structure and types
+    console.log('WakaTime API response structure:', {
+      start: typeof data.data.start,
+      end: typeof data.data.end,
+      daily_average_seconds: typeof data.data.daily_average_seconds,
+      total_seconds: typeof data.data.total_seconds
+    });
+    
+    // Ensure values are proper numbers
+    const dailyAverage = parseFloat(data.data.daily_average_seconds) || 0;
+    const totalSeconds = parseFloat(data.data.total_seconds) || 0;
+    
+    // Transform with explicit type conversion
     return NextResponse.json({
       start_date: data.data.start,
       end_date: data.data.end,
-      daily_average: data.data.daily_average_seconds,
-      total_seconds: data.data.total_seconds,
-      best_day: data.data.best_day,
-      languages: data.data.languages
+      daily_average: dailyAverage,
+      total_seconds: totalSeconds,
+      best_day: {
+        date: data.data.best_day?.date || '',
+        total_seconds: parseFloat(data.data.best_day?.total_seconds) || 0
+      },
+      languages: Array.isArray(data.data.languages) 
+        ? data.data.languages.map(lang => ({
+            name: lang.name,
+            percent: parseFloat(lang.percent) || 0,
+            total_seconds: parseFloat(lang.total_seconds) || 0
+          }))
+        : []
     });
     
   } catch (error) {
