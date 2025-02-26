@@ -23,7 +23,15 @@ export async function GET() {
     }
 
     const data = await response.json();
-    return NextResponse.json(data.data);
+    // Transform to match component structure
+    return NextResponse.json({
+      start_date: data.data.start,
+      end_date: data.data.end,
+      daily_average: data.data.daily_average_seconds,
+      total_seconds: data.data.total_seconds,
+      best_day: data.data.best_day,
+      languages: data.data.languages
+    });
     
   } catch (error) {
     console.error('Error fetching WakaTime stats:', error);
