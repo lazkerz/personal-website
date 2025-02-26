@@ -47,7 +47,7 @@ export async function GET() {
         total_seconds: parseFloat(data.data.best_day?.total_seconds) || 0
       },
       languages: Array.isArray(data.data.languages) 
-        ? data.data.languages.map(lang => ({
+        ? data.data.languages.map((lang: { name: string; percent: string; total_seconds: string }) => ({
             name: lang.name,
             percent: parseFloat(lang.percent) || 0,
             total_seconds: parseFloat(lang.total_seconds) || 0
