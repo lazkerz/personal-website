@@ -151,6 +151,11 @@ export const projects: Project[] = [
     ],
     technologies: [
       {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "bg-[#61DAFB]/20",
+      },
+      {
         name: "React",
         icon: SiReact,
         color: "bg-[#61DAFB]/20",
