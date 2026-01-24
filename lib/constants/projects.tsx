@@ -21,6 +21,7 @@ import {
   SiAuth0,
   SiDart,
   SiFlutter,
+  SiChartdotjs,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
@@ -51,31 +52,59 @@ export const projects: Project[] = [
     id: 1,
     title: "Samosir Live",
     description:
-      "A platform that connects farmers with buyers, simplifying transactions for the sale of agricultural and plantation products",
+      "Samosir Live is a comprehensive web-based outlet management system built with Laravel that serves as the operational backbone for multi-branch retail operations. The platform manages hundreds of active users across multiple outlet locations, facilitating real-time inventory tracking, sales monitoring, and cross-branch coordination.",
     images: [
       {
-        url: "/projects/siphani/siphani-preview.jpg",
-        alt: "Siphani Preview 1",
+        url: "/projects/samosir/user.png",
+        alt: "samosir Preview 1",
       },
       {
-        url: "/projects/siphani/siphani-preview2.jpg",
-        alt: "Siphani Preview 2",
+        url: "/projects/samosir/redeem_voucher.png",
+        alt: "samosir Preview 2",
       },
       {
-        url: "/projects/siphani/siphani-preview3.jpg",
-        alt: "Siphani Preview 3",
+        url: "/projects/samosir/outlet.png",
+        alt: "samosir Preview 3",
+      },
+      {
+        url: "/projects/samosir/wallet.png",
+        alt: "samosir Preview 4",
+      },
+      {
+        url: "/projects/samosir/detail_wallet.png",
+        alt: "samosir Preview 5",
+      },
+      {
+        url: "/projects/samosir/track.png",
+        alt: "samosir Preview 6",
+      },
+      {
+        url: "/projects/samosir/redeem_item.png",
+        alt: "samosir Preview 7",
+      },
+      {
+        url: "/projects/samosir/redeem_item_detail.png",
+        alt: "samosir Preview 8",
+      },
+      {
+        url: "/projects/samosir/broadcast.png",
+        alt: "samosir Preview 9",
+      },
+      {
+        url: "/projects/samosir/survey.png",
+        alt: "samosir Preview 10",
       },
     ],
     technologies: [
       {
-        name: "React",
-        icon: SiReact,
+        name: "Laravel",
+        icon: SiLaravel,
         color: "bg-[#61DAFB]/20",
       },
       {
-        name: "TypeScript",
-        icon: SiTypescript,
-        color: "bg-[#3178C6]/20",
+        name: "PHP",
+        icon: SiPhp,
+        color: "bg-[#06B6D4]/20",
       },
       {
         name: "TailwindCSS",
@@ -83,8 +112,8 @@ export const projects: Project[] = [
         color: "bg-[#06B6D4]/20",
       },
       {
-        name: "PHP",
-        icon: SiPhp,
+        name: "Chart Js",
+        icon: SiChartdotjs,
         color: "bg-[#06B6D4]/20",
       },
       {
@@ -201,7 +230,7 @@ export const projects: Project[] = [
         color: "bg-[#F24E1E]/20",
       },
     ],
-    demo: "https://senat.polmed.ac.id/",
+    demo: "",
     type: "Web",
   },
   {
