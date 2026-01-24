@@ -127,7 +127,7 @@ export const projects: Project[] = [
         color: "bg-[#F24E1E]/20",
       },
     ],
-    demo: "https://siphani.com/",
+    demo: "",
     type: "Web",
   },
   {
@@ -186,7 +186,7 @@ export const projects: Project[] = [
         color: "bg-[#F24E1E]/20",
       },
     ],
-    demo: "https://siphani.com/",
+    demo: "",
     type: "Web",
   },
   {
