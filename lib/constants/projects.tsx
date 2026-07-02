@@ -58,12 +58,16 @@ export const projects: Project[] = [
       alt: "Fullfillment summary daily"
     },
     {
-      url: "/projects/sales/image4.png", 
+      url: "/projects/sales/image2.png", 
       alt: "ODP Capacity Analysis"
     },
     {
       url: "/projects/sales/image3.png", 
       alt: "Dashboard Overview"
+    },
+    {
+      url: "/projects/sales/image4.png", 
+      alt: "Bot Automation"
     },
 
   ],
