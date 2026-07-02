@@ -60,7 +60,7 @@ export const projects: Project[] = [
     },
     {
       url: "/projects/sales/image4.png", 
-      alt: "ODP Network Capacity Analysis"
+      alt: "ODP Capacity Analysis"
     },
     {
       url: "/projects/sales/image3.png", 
