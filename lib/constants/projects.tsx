@@ -17,7 +17,6 @@ import {
   SiGooglecloud,
   SiAndroid,
   SiKotlin,
-  SiRealm,
   SiAuth0,
   SiDart,
   SiFlutter,
@@ -626,11 +625,6 @@ export const projects: Project[] = [
         color: "bg-[#4479A1]/20",
       },
       {
-        name: "Realm Database",
-        icon: SiRealm,
-        color: "bg-[#4479A1]/20",
-      },
-      {
         name: "Github",
         icon: SiGithub,
         color: "bg-[#4479A1]/20",
@@ -664,11 +658,6 @@ export const projects: Project[] = [
       {
         name: "Kotlin",
         icon: SiKotlin,
-        color: "bg-[#4479A1]/20",
-      },
-      {
-        name: "Realm Database",
-        icon: SiRealm,
         color: "bg-[#4479A1]/20",
       },
       {
