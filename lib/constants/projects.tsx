@@ -50,7 +50,7 @@ export const projects: Project[] = [
   //Project Web
   {
   id: 1,
-  title: "Telkomsel Analytics & Automation Platform",
+  title: "Sales Analytics & Automation Platform",
   description: "Two-phase analytics solution built across different divisions at PT Telkomsel. Phase 1 (Mobile Division): Built monitoring dashboards for kartu and voucher sales performance across 6 regional branches — translating sales team requirements into real-time reporting tools serving 200+ users. Phase 2 (Indihome/Household Division): Expanded scope to enterprise-level operational analytics. Extracted and processed large-scale data from Hive/Hadoop infrastructure covering installation data (PS/RE/IO), ODP network capacity, coverage distance, and APC cluster performance. Performed symptoms analysis to diagnose broadband service failures — ODP capacity issues, wifi outages, failed installations — and presented findings visually for management strategic decisions. Automated the full reporting pipeline using Python and Shell Script, reducing manual workload by 60%. The analytical work directly contributed to Indihome sales program strategy discussions with management.",
   images: [
     {
