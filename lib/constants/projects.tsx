@@ -47,12 +47,41 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+
   //Project Web
+  {
+  id: 0,
+  title: "Telkomsel Analytics & Automation Platform",
+  description: "Two-phase analytics solution built across different divisions at PT Telkomsel. Phase 1 (Mobile Division): Built monitoring dashboards for kartu and voucher sales performance across 6 regional branches — translating sales team requirements into real-time reporting tools serving 200+ users. Phase 2 (Indihome/Household Division): Expanded scope to enterprise-level operational analytics. Extracted and processed large-scale data from Hive/Hadoop infrastructure covering installation data (PS/RE/IO), ODP network capacity, coverage distance, and APC cluster performance. Performed symptoms analysis to diagnose broadband service failures — ODP capacity issues, wifi outages, failed installations — and presented findings visually for management strategic decisions. Automated the full reporting pipeline using Python and Shell Script, reducing manual workload by 60%. The analytical work directly contributed to Indihome sales program strategy discussions with management.",
+  images: [
+    {
+      url: "/projects/sales/image1.png",
+      alt: "Fullfillment summary daily"
+    },
+    {
+      url: "/projects/sales/image4.png", 
+      alt: "ODP Network Capacity Analysis"
+    },
+    {
+      url: "/projects/sales/image3.png", 
+      alt: "Dashboard Overview"
+    },
+
+  ],
+  technologies: [
+    { name: "Python", icon: SiGithub, color: "bg-[#3776AB]/20" },
+    { name: "SQL", icon: SiMysql, color: "bg-[#4479A1]/20" },
+    { name: "Laravel", icon: SiLaravel, color: "bg-[#FF2D20]/20" },
+    { name: "PHP", icon: SiPhp, color: "bg-[#06B6D4]/20" },
+    { name: "Chart Js", icon: SiChartdotjs, color: "bg-[#06B6D4]/20" },
+  ],
+  demo: "",
+  type: "Web" as const,
+  },
   {
     id: 1,
     title: "Samosir Live",
-    description:
-      "Samosir Live is a comprehensive web-based outlet management system built with Laravel that serves as the operational backbone for multi-branch retail operations. The platform manages hundreds of active users across multiple outlet locations, facilitating real-time inventory tracking, sales monitoring, and cross-branch coordination.",
+    description: "Operational analytics platform built for PT Telkomsel to solve a critical business problem: sales teams across 6 regional branches had no real-time visibility into outlet performance — reports took 2-3 days and were often inaccurate by the time they arrived. I gathered requirements from sales and marketing stakeholders, defined the data structure and KPIs that mattered to the business, and designed the system to pull data from enterprise infrastructure. The result: 200+ active users now monitor outlet performance, sales tracking, and cross-branch coordination in real-time — reducing report lag from days to seconds.",
     images: [
       {
         url: "/projects/samosir/user.png",
@@ -133,8 +162,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Siphani",
-    description:
-      "A platform that connects farmers with buyers, simplifying transactions for the sale of agricultural and plantation products",
+    description: "A marketplace platform built to solve a real supply chain problem: farmers struggled to sell directly to consumers due to too many middlemen reducing their income. I gathered requirements from both farmer and buyer perspectives, mapped the transaction flow, and built an end-to-end platform connecting agricultural producers directly with consumers. Live at siphani.com.",
     images: [
       {
         url: "/projects/siphani/siphani-preview.jpg",
@@ -192,8 +220,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Sistem Report Honor Senat Polmed",
-    description:
-      "Organized meeting results and attendance records to ensure accurate and timely honor disbursements. Analyzed attendance data and calculated honorarium for university senate members based on meeting participation. Developed an efficient process for data collection and representation",
+    description: "Identified and solved a manual process problem at Politeknik Negeri Medan: senate honor disbursements were calculated manually from attendance records, causing errors and delays. I analyzed the existing workflow, gathered requirements from the admin team, and designed an automated system that calculates honorarium based on meeting participation and generates accurate reports. The system eliminated manual calculation errors and reduced processing time significantly. Live at senat.polmed.ac.id.",
     images: [
       {
         url: "/projects/senat/senat-preview.png",
@@ -241,8 +268,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "SIMKATMAWA",
-    description:
-      " Managing the latest data on student achievements, organizing and visualize data to track performance metrics and perform analytics to provide insights",
+    description: "Student achievement tracking system built for Politeknik Negeri Medan to solve a data visibility problem: student achievement data was scattered and unstructured, making it difficult for management to track performance trends. I designed a centralized system that organizes, visualizes, and analyzes student achievement data — providing management with clear insights for academic decision-making.",
     images: [
       {
         url: "/projects/simkatmawa/simkatmawa-preview.png",
